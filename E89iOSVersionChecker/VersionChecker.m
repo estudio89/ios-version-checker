@@ -86,6 +86,10 @@ static NSString *PENDING_INFO_NEW_VERSION = @"pending_new_version";
     return @{PENDING_INFO_OLD_VERSION:oldVersion, PENDING_INFO_NEW_VERSION:newVersion};
 }
 
+- (BOOL)hasPendingUpdates {
+    return [self getPendingUpdateInfo] != nil;
+}
+
 - (void)addPendingUpdate:(NSString *)oldVersion withNewVersion:(NSString *)newVersion {
     NSString *pending = [NSString stringWithFormat:@"%@;%@", oldVersion, newVersion];
     [[NSUserDefaults standardUserDefaults] setValue:pending forKey:PENDING_UPDATE_KEY];

@@ -22,6 +22,8 @@
 + (NSString *)PENDING_INFO_NEW_VERSION;
 - (instancetype)initWithDelegate:(id <VersionChangeDelegate>)delegate;
 - (NSDictionary *)getPendingUpdateInfo;
+- (BOOL)hasPendingUpdates;
 - (void)clearPendingUpdates;
+- (void)addPendingUpdate:(NSString *)oldVersion withNewVersion:(NSString *)newVersion;
 
 @end

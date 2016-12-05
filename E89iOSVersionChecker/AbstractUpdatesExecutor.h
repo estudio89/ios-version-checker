@@ -24,5 +24,7 @@
 
 - (instancetype)initWithDelegate:(id <UpdateDelegate>)delegate withInfo:(NSDictionary *)updateInfo;
 - (void)runUpdate;
+- (void)onUpdateFinished;
+- (void)onUpdateFailed;
 
 @end

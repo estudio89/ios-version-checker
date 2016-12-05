@@ -27,4 +27,12 @@
 - (void)runUpdate {
 }
 
+- (void)onUpdateFinished {
+    [_delegate onUpdateFinished];
+}
+
+- (void)onUpdateFailed {
+    [_delegate onUpdateFailed];
+}
+
 @end
